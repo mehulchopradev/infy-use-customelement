@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/infy-custom-elements.js"></script>
+</head>
+<body>
+  <label>Country</label>
+  <infy-select
+    id="cs"
+    name="country"
+    options='[{"label": "India", "value": "IN"}, {"label": "Australia", "value": "AU"}]'
+  />
+
+  <script>
+    const cs = document.getElementById('cs');
+    cs.addEventListener('onChange', (event) => {
+      alert(`User has selected the country: ${event.detail}`);
+    });
+  </script>
+</body>
+</html>
